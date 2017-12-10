@@ -1,0 +1,6 @@
+SELECT
+    okres_org, sum(leden_2015), sum(unor_2015), sum(brezen_2015), sum(duben_2015), sum(kveten_2015), sum(cerven_2015), sum(cervenec_2015), sum(srpen_2015), sum(zari_2015), sum(rijen_2015), sum(listopad_2015), sum(prosinec_2015), sum(leden_2016), sum(unor_2016), sum(brezen_2016), sum(duben_2016), sum(kveten_2016), sum(cerven_2016), sum(cervenec_2016), sum(srpen_2016), sum(zari_2016), sum(rijen_2016), sum(listopad_2016), sum(prosinec_2016), sum(leden_2017), sum(unor_2017), sum(brezen_2017), sum(duben_2017), sum(kveten_2017), sum(cerven_2017), sum(cervenec_2017), sum(srpen_2017), sum(zari_2017), sum(rijen_2017)
+FROM import_organization I
+LEFT OUTER JOIN import_ucetnictvi U ON U.id_org = I.id_org
+
+GROUP BY okres_org
